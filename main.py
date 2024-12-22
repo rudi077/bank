@@ -25,7 +25,7 @@ if audio_value:
     pretrained = torch.argmax(logits, dim=-1)
     sonuc = tokenizer.decode(pretrained[0])
     mesaj=sonuc
-    df=pd.read_csv('bankv2.csv')
+    df=pd.read_csv('bankv3.csv')
     df=df[['sorgu','label']]
     cv=CountVectorizer(max_features=250)
     rf=RandomForestClassifier()
